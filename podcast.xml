@@ -1,8 +1,12 @@
 ---
-
+layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xml:lang="{{ site.lang }}">
+<rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom" 
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" 
+    xml:lang="{{ site.lang }}">
     <channel>
         <atom:link href="{{ site.url }}/podcast.rss" rel="self" type="application/rss+xml" />
         <title>{{ site.title }}</title>
@@ -47,9 +51,9 @@
                 <enclosure url="{{ post.mp3-url }}" length="{{ post.length }}" type="audio/mp3"/>
                 <itunes:author>{{ site.author }}</itunes:author>
                 <itunes:summary>{{ post.excerpt | xml_escape }}</itunes:summary>
-                <itunes:subtitle>{{ site.title }}: {{ post.title }}</itunes:subtitle>
+                <itunes:subtitle>{{ site.title | xml_escape }}: {{ post.title | xml_escape }}</itunes:subtitle>
                 <itunes:duration>{{ post.duration }}</itunes:duration>
-                <itunes:keywords>{{ post.keywords }}</itunes:keywords>
+                <itunes:keywords>{{ post.keywords | join: "," }}</itunes:keywords>
                 <itunes:season>{{ post.season }}</itunes:season>
                 <itunes:episode>{{ post.episode }}</itunes:episode>
                 <itunes:episodeType>{{ post.episode-type }}</itunes:episodeType>
