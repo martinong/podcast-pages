@@ -2,7 +2,7 @@
 title:        "Introducing Ctrl+Alt+Career & your host Jennifer Ong"
 season:       1
 episode:      1
-keywords:     
+keywords:
 - career
 - alternative
 date:         2020-08-03 16:29:02 +0800
@@ -13,9 +13,10 @@ episode-type: trailer # or "full"
 explicit:     no
 block:        "no" # means is shown in itunes
 
-layout:   podcast
+layout: podcast
 excerpt_separator: <!--more-->
 ---
 Feel stuck at your corporate job? Want to quit but unsure what’s out there? Or maybe you already have a side hustle but you’re not sure how to translate it into a full time career? Welcome to Ctrl+Alt+Career, a podcast where we will be sharing stories of those in Asia who have successfully taken the leap from their corporate job to an alternative career. 
 <!--more-->
+
 In this first episode, get to know your host Jennifer Ong and hear her candid story from a well paid job in finance to life at a fashion start up, and why she decided to start this podcast.

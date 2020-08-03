@@ -13,10 +13,8 @@ copyright: "&#x2117; &amp; &#xA9; 2020 Ctrl + Alt + Career"
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-# markdown: kramdown
+markdown: kramdown
 theme: jekyll-theme-minimal
-plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
