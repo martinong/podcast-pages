@@ -6,7 +6,11 @@ layout: default
 <h2>{{ page.title }}</h2>
 <h3>{{ page.subtitle }}</h3>
 
-<p class="view">by {{ page.author | default: site.author }}</p>
+<section>
+	<audio id="player" preload="auto" controls>
+	  <source src="{{ page.mp3-url }}" type="audio/mp3" />
+	</audio>
+</section>
 
 <h3>Show Notes</h3>
 {{content}}

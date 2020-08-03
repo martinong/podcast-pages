@@ -1,5 +1,13 @@
-<nav>
+<table>
   {% for post in site.posts %}
-    <a href="{{ post.url }}">{{ post.title }}</a>
+  <tr>
+  	<td>
+  		<a href="{{ post.url }}"><img src="{{"assets/img/play.png" | relative_url}}" alt="Play" /></a>
+  	</td>
+    <td>
+    	<a href="{{ post.url }}">{{ post.title }}</a><br />
+    	<small>{{ post.date | date: "%-d %B %Y" }}</small>
+    </td>
+  </tr>
   {% endfor %}
-</nav>
+</table>>
