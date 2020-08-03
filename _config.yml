@@ -8,7 +8,7 @@ subtitle: >-
   Behind the scenes of people who have embarked on an alternative career in Asia
 lang: en-us
 copyright: "&#xA9; 2020 Ctrl + Alt + Career"
-logo: assets/img/logo.png
+logo: /assets/img/logo.png
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 

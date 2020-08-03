@@ -11,7 +11,7 @@ layout: null
         <atom:link href="{{ "/podcast.rss" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
         <title>{{ site.title }}</title>
         <description>{{ site.description | xml_escape }}</description>
-        <link>{{ site.url }}</link>
+        <link>{{ site.baseurl | prepend: site.url }}</link>
         <language>{{ site.lang }}</language>
         <managingEditor>{{ site.email }} ({{ site.author }})</managingEditor>
         <webMaster>{{ site.email }} ({{ site.author }})</webMaster>
@@ -20,7 +20,7 @@ layout: null
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <image>
             <link>{{ site.url }}</link>
-            <url>{{ site.logo  | prepend: site.baseurl | prepend: site.url }}</url>
+            <url>{{ site.logo | prepend: site.baseurl | prepend: site.url }}</url>
             <title>{{ site.title }}</title>
         </image>
         <itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
@@ -45,10 +45,10 @@ layout: null
                 <title>{{ post.title | xml_escape }}</title>
                 <itunes:title>{{ post.title | xml_escape }}</itunes:title>
                 <description>{{ post.content | xml_escape }}</description>
-                <link>{{ site.url }}{{ post.url }}</link>
+                <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
                 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-                <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-                <enclosure url="{{ post.mp3-url | absolute_url }}" length="{{ post.length }}" type="audio/mp3"/>
+                <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+                <enclosure url="{{ post.mp3-url | prepend: site.baseurl | prepend: site.url }}" length="{{ post.length }}" type="audio/mp3"/>
                 <itunes:author>{{ site.author }}</itunes:author>
                 <itunes:summary>{{ post.excerpt | xml_escape }}</itunes:summary>
                 <itunes:subtitle>{{ site.title | xml_escape }}: {{ post.title | xml_escape }}</itunes:subtitle>
@@ -57,7 +57,7 @@ layout: null
                 <itunes:season>{{ post.season }}</itunes:season>
                 <itunes:episode>{{ post.episode }}</itunes:episode>
                 <itunes:episodeType>{{ post.episode-type }}</itunes:episodeType>
-                <itunes:image href="{{ site.logo  | prepend: site.baseurl | prepend: site.url }}" />
+                <itunes:image href="{{ site.logo | prepend: site.baseurl | prepend: site.url }}" />
                 <itunes:explicit>{{ post.explicit }}</itunes:explicit>
                 <itunes:block>{{ post.block }}</itunes:block>
             </item>
