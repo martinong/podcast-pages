@@ -1,1 +1,31 @@
+title: Ctrl + Alt + Career
+author: Jennifer Ong
+email: j.ong1222@gmail.com
+description: >-
+  Ctrl + Alt + Career goes behind the scenes of people who have embarked on an alternative career in Asia 
+  and the challenges they face in a society where we are often expected to follow a traditional career path.
+subtitle: >-
+  Behind the scenes of people who have embarked on an alternative career in Asia
+lang: en-us
+copyright: "&#x2117; &amp; &#xA9; 2020 Ctrl + Alt + Career"
+
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
 theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

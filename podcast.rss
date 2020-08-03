@@ -1,0 +1,62 @@
+---
+
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xml:lang="{{ site.lang }}">
+    <channel>
+        <atom:link href="{{ site.url }}/podcast.rss" rel="self" type="application/rss+xml" />
+        <title>{{ site.title }}</title>
+        <description>{{ site.description | xml_escape }}</description>
+        <link>{{ site.url }}</link>
+        <language>{{ site.lang }}</language>
+        <managingEditor>{{ site.email }} ({{ site.author }})</managingEditor>
+        <webMaster>{{ site.email }} ({{ site.author }})</webMaster>
+        <copyright>{{ site.copyright }}</copyright>
+        <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+        <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+        <image>
+            <link>{{ site.url }}</link>
+            <url>{{ site.url }}/assets/img/logo.png</url>
+            <title>{{ site.title }}</title>
+        </image>
+        <itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
+        <itunes:author>{{ site.author }}</itunes:author>
+        <itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
+        <itunes:keywords>{{ site.keywords }}</itunes:keywords>
+        <itunes:owner>
+            <itunes:name>{{ site.author }}</itunes:name>
+            <itunes:email>{{ site.email }}</itunes:email>
+        </itunes:owner>
+        <itunes:image href="{{ site.url }}/assets/img/logo.png" />
+        <itunes:category text="Business">
+            <itunes:category text="Careers" />
+        </itunes:category>
+        <itunes:category text="Business">
+            <itunes:category text="Entrepreneurship" />
+        </itunes:category>
+        <itunes:type>episodic</itunes:type>
+        <itunes:explicit>no</itunes:explicit>
+        {% for post in site.posts %}
+            <item>
+                <title>{{ post.title | xml_escape }}</title>
+                <itunes:title>{{ post.title | xml_escape }}</itunes:title>
+                <description>{{ post.content | xml_escape }}</description>
+                <link>{{ site.url }}{{ post.url }}</link>
+                <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+                <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+                <enclosure url="{{ post.mp3-url }}" length="{{ post.length }}" type="audio/mp3"/>
+                <itunes:author>{{ site.author }}</itunes:author>
+                <itunes:summary>{{ post.excerpt | xml_escape }}</itunes:summary>
+                <itunes:subtitle>{{ site.title }}: {{ post.title }}</itunes:subtitle>
+                <itunes:duration>{{ post.duration }}</itunes:duration>
+                <itunes:keywords>{{ post.keywords }}</itunes:keywords>
+                <itunes:season>{{ post.season }}</itunes:season>
+                <itunes:episode>{{ post.episode }}</itunes:episode>
+                <itunes:episodeType>{{ post.episode-type }}</itunes:episodeType>
+                <itunes:image href="{{ site.url }}/assets/img/logo.png" />
+                <itunes:explicit>{{ post.explicit }}</itunes:explicit>
+                <itunes:block>{{ post.block }}</itunes:block>
+            </item>
+        {% endfor %}
+    </channel>
+</rss>
