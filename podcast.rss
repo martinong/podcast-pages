@@ -51,7 +51,7 @@ layout: null
                 <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
                 <enclosure url="{{ post.mp3-url | prepend: site.baseurl | prepend: site.url }}" length="{{ post.length }}" type="audio/mp3"/>
                 <itunes:author>{{ site.author }}</itunes:author>
-                <itunes:summary><![CDATA[{{ post.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]></itunes:summary>
+                <itunes:summary><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></itunes:summary>
                 <itunes:subtitle><![CDATA[{{ post.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]></itunes:subtitle>
                 <itunes:duration>{{ post.duration }}</itunes:duration>
                 <itunes:keywords>{{ post.keywords | join: "," }}</itunes:keywords>
