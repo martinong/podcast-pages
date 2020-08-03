@@ -48,7 +48,7 @@ layout: null
                 <link>{{ site.url }}{{ post.url }}</link>
                 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
                 <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-                <enclosure url="{{ post.mp3-url }}" length="{{ post.length }}" type="audio/mp3"/>
+                <enclosure url="{{ post.mp3-url | absolute_url }}" length="{{ post.length }}" type="audio/mp3"/>
                 <itunes:author>{{ site.author }}</itunes:author>
                 <itunes:summary>{{ post.excerpt | xml_escape }}</itunes:summary>
                 <itunes:subtitle>{{ site.title | xml_escape }}: {{ post.title | xml_escape }}</itunes:subtitle>

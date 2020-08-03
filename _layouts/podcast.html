@@ -8,7 +8,7 @@ layout: default
 
 <section>
 	<audio id="player" preload="auto" controls>
-	  <source src="{{ page.mp3-url }}" type="audio/mp3" />
+	  <source src="{{ page.mp3-url | prepend: site.baseurl | prepend: site.url }}" type="audio/mp3" />
 	</audio>
 </section>
 

@@ -6,9 +6,9 @@ keywords:
 - career
 - alternative
 date:         2020-08-03 16:29:02 +0800
-mp3-url:      "https://www.buzzsprout.com/1243763/4813730-introducing-ctrl-alt-career-your-host-jennifer-ong.mp3?blob_id=19147916"
+mp3-url:      "/assets/audio/intro.mp3"
 duration:     "222" # audio length in sec
-length:       "2693306" # filesize in byte
+length:       "2037036" # filesize in byte
 episode-type: trailer # or "full"
 explicit:     no
 block:        "no" # means is shown in itunes
