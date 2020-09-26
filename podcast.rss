@@ -44,7 +44,7 @@ layout: null
             <item>
                 <title>{{ post.title | xml_escape }}</title>
                 <itunes:title>{{ post.title | xml_escape }}</itunes:title>
-                <description><![CDATA[{{ post.excerpt | strip_html | truncatewords: 50 | expand_urls: site.url | cdata_escape }}]]></description>
+                <description><![CDATA[{{ post.excerpt | strip_html | expand_urls: site.url | cdata_escape }}]]></description>
                 <content:encoded><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content:encoded>
                 <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
                 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
