@@ -1,13 +1,17 @@
 <table>
   {% for post in site.posts %}
   <tr>
-  	<td>
-  		<a href="{{ post.url | absolute_url }}"><img src="{{"assets/img/play.png" | relative_url}}" alt="Play" /></a>
-  	</td>
+<!-- TODO: Add a thumbnail
     <td>
-    	<a href="{{ post.url | absolute_url }}">{{ post.title }}</a><br />
-    	<small>{{ post.date | date: "%-d %B %Y" }}</small>
+      <a href="{{ post.url | absolute_url }}">
+        <img src="{{"assets/img/play.png" | relative_url}}" alt="Play" />
+      </a>
+    </td>
+-->
+    <td>
+      <a href="{{ post.url | absolute_url }}">{{ post.title }}</a><br />
+      <small>{{ post.date | date: "%-d %B %Y" }}</small>
     </td>
   </tr>
   {% endfor %}
-</table>>
+</table>

@@ -3,16 +3,19 @@ layout: default
 ---
 
 <small>{{ page.date | date: "%-d %B %Y" }}</small>
-<h2>{{ page.title }}</h2>
-<h3>{{ page.subtitle }}</h3>
+<h2>
+    {{ page.title }}
+    <br />
+    <small>{{ page.subtitle }}</small>
+</h2>
 
 <section>
-	<audio id="player" preload="auto" controls>
-	  <source src="{{ page.mp3-url | prepend: site.baseurl | prepend: site.url }}" type="audio/mp3" />
-	</audio>
+    <audio class="podcast" preload="auto" controls>
+      <source src="{{ page.mp3-url | prepend: site.baseurl | prepend: site.url }}" type="audio/mp3" />
+    </audio>
 </section>
 
-<h3>Show Notes</h3>
+<h3>Notes</h3>
 {{content}}
 
 {% if page.keywords %}

@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -15,7 +14,7 @@
     <div class="wrapper">
       <header>
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        <img id="logo" src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
         <h2>{{ site.author }}</h2>

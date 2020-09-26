@@ -1,13 +1,9 @@
-title: Ctrl + Alt + Career
-author: Jennifer Ong
-email: j.ong1222@gmail.com
-description: >-
-  Ctrl + Alt + Career goes behind the scenes of people who have embarked on an alternative career in Asia 
-  and the challenges they face in a society where we are often expected to follow a traditional career path.
-subtitle: >-
-  Behind the scenes of people who have embarked on an alternative career in Asia
+title: My Amazing Podcast
+description: You'll hear me talk about amazing things!
+author: My Name
+email: my@email.com
 lang: en-us
-copyright: "&#x2117; &amp; &#xA9; 2020 Ctrl + Alt + Career"
+copyright: "&#x2117; &amp; &#xA9; 2020"
 logo: /assets/img/logo.png
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -21,8 +17,3 @@ markdown: kramdown
 exclude:
   - Gemfile
   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
