@@ -3,7 +3,7 @@ layout: null
 ---
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-    <loc>{ site.baseurl | prepend: site.url }}</loc>
+    <loc>{{ site.baseurl | prepend: site.url }}</loc>
     <lastmod>{{ site.time | date_to_rfc822 }}</lastmod>
     <priority>1.0</priority>
 </url>
